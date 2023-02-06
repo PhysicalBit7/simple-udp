@@ -96,6 +96,7 @@ int main(int argc, char **argv) {
         if (n < 0) 
             error("ERROR in recvfrom");
         if(strcmp(buf, "Bye\n") == 0)
+	    printf("Bye\n");
             break;
         printf("Echo from server: %s", buf);
     }
