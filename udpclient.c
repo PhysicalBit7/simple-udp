@@ -95,9 +95,10 @@ int main(int argc, char **argv) {
         n = recvfrom(sockfd, buf, strlen(buf), 0, (struct sockaddr *)&serveraddr, &serverlen);
         if (n < 0) 
             error("ERROR in recvfrom");
-        if(strcmp(buf, "Bye\n") == 0)
+        if(strcmp(buf, "Bye\n") == 0){
 	    printf("Bye\n");
             break;
+	}
         printf("Echo from server: %s", buf);
     }
     close(sockfd);
